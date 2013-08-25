@@ -4,6 +4,6 @@ var SpaceReports = require('../model/spacereport.js'),
 exports.route = route;
 function route(req, res){
 	SpaceReports.current(function(report){
-		res.send(report);
+		res.jsonp(report);		
 	});
 }
